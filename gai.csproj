@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5D62228-B395-49FE-8279-9647205784E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>gai</RootNamespace>
+    <AssemblyName>gai</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words, Version=22.11.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add\AccountingAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\AccountingAdd.Designer.cs">
+      <DependentUpon>AccountingAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\HistoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\HistoryAdd.Designer.cs">
+      <DependentUpon>HistoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\DutyAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\DutyAdd.Designer.cs">
+      <DependentUpon>DutyAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\AccountingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\AccountingEdit.Designer.cs">
+      <DependentUpon>AccountingEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\DtpAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\DtpAdd.Designer.cs">
+      <DependentUpon>DtpAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\IllegalAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\IllegalAdd.Designer.cs">
+      <DependentUpon>IllegalAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\DutyDotsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\DutyDotsAdd.Designer.cs">
+      <DependentUpon>DutyDotsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\RewardsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\RewardsAdd.Designer.cs">
+      <DependentUpon>RewardsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\DtpEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\DtpEdit.Designer.cs">
+      <DependentUpon>DtpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\DtpPeopleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\DtpPeopleEdit.Designer.cs">
+      <DependentUpon>DtpPeopleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\DutyDotsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\DutyDotsEdit.Designer.cs">
+      <DependentUpon>DutyDotsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\DutyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\DutyEdit.Designer.cs">
+      <DependentUpon>DutyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\HistoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\HistoryEdit.Designer.cs">
+      <DependentUpon>HistoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\IllegalEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\IllegalEdit.Designer.cs">
+      <DependentUpon>IllegalEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\RewardsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\RewardsEdit.Designer.cs">
+      <DependentUpon>RewardsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\DutyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\DutyForm.Designer.cs">
+      <DependentUpon>DutyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\DtpPeopleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\DtpPeopleAdd.Designer.cs">
+      <DependentUpon>DtpPeopleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AccountingFormNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountingFormNew.Designer.cs">
+      <DependentUpon>AccountingFormNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dtp\DtpFormNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dtp\DtpFormNew.Designer.cs">
+      <DependentUpon>DtpFormNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ViewFormFullAllTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\ViewFormFullAllTables.Designer.cs">
+      <DependentUpon>ViewFormFullAllTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\IllegalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\IllegalForm.Designer.cs">
+      <DependentUpon>IllegalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\AccountingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\AccountingForm.Designer.cs">
+      <DependentUpon>AccountingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\DtpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\DtpForm.Designer.cs">
+      <DependentUpon>DtpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gaidatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gaidatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global\InformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\InformationForm.Designer.cs">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\PersonsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\PersonsForm.Designer.cs">
+      <DependentUpon>PersonsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SelectItemForReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\SelectItemForReport.Designer.cs">
+      <DependentUpon>SelectItemForReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\ViewForm.Designer.cs">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ViewFormFullTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\ViewFormFullTable.Designer.cs">
+      <DependentUpon>ViewFormFullTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ViewFormFull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\ViewFormFull.Designer.cs">
+      <DependentUpon>ViewFormFull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\GridSelectItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\GridSelectItem.Designer.cs">
+      <DependentUpon>GridSelectItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\PickDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\PickDate.Designer.cs">
+      <DependentUpon>PickDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persons\PersonsFormAddHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persons\PersonsFormAddHistory.Designer.cs">
+      <DependentUpon>PersonsFormAddHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persons\PersonsFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persons\PersonsFormAdd.Designer.cs">
+      <DependentUpon>PersonsFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persons\PersonsFormNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persons\PersonsFormNew.Designer.cs">
+      <DependentUpon>PersonsFormNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add\AccountingAdd.resx">
+      <DependentUpon>AccountingAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\HistoryAdd.resx">
+      <DependentUpon>HistoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\DutyAdd.resx">
+      <DependentUpon>DutyAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\AccountingEdit.resx">
+      <DependentUpon>AccountingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\DtpAdd.resx">
+      <DependentUpon>DtpAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\IllegalAdd.resx">
+      <DependentUpon>IllegalAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\DutyDotsAdd.resx">
+      <DependentUpon>DutyDotsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\RewardsAdd.resx">
+      <DependentUpon>RewardsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\DtpEdit.resx">
+      <DependentUpon>DtpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\DtpPeopleEdit.resx">
+      <DependentUpon>DtpPeopleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\DutyDotsEdit.resx">
+      <DependentUpon>DutyDotsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\DutyEdit.resx">
+      <DependentUpon>DutyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\HistoryEdit.resx">
+      <DependentUpon>HistoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\IllegalEdit.resx">
+      <DependentUpon>IllegalEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\RewardsEdit.resx">
+      <DependentUpon>RewardsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\DutyForm.resx">
+      <DependentUpon>DutyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\DtpPeopleAdd.resx">
+      <DependentUpon>DtpPeopleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingFormNew.resx">
+      <DependentUpon>AccountingFormNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dtp\DtpFormNew.resx">
+      <DependentUpon>DtpFormNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\ViewFormFullAllTables.resx">
+      <DependentUpon>ViewFormFullAllTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\IllegalForm.resx">
+      <DependentUpon>IllegalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\AccountingForm.resx">
+      <DependentUpon>AccountingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\DtpForm.resx">
+      <DependentUpon>DtpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\InformationForm.resx">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\PersonsForm.resx">
+      <DependentUpon>PersonsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SelectItemForReport.resx">
+      <DependentUpon>SelectItemForReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\ViewForm.resx">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\ViewFormFullTable.resx">
+      <DependentUpon>ViewFormFullTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\ViewFormFull.resx">
+      <DependentUpon>ViewFormFull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\GridSelectItem.resx">
+      <DependentUpon>GridSelectItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\PickDate.resx">
+      <DependentUpon>PickDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persons\PersonsFormAddHistory.resx">
+      <DependentUpon>PersonsFormAddHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persons\PersonsFormAdd.resx">
+      <DependentUpon>PersonsFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persons\PersonsFormNew.resx">
+      <DependentUpon>PersonsFormNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="gaidatabaseDataSet.xsc">
+      <DependentUpon>gaidatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gaidatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gaidatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gaidatabaseDataSet.xss">
+      <DependentUpon>gaidatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\businessapplication_edit_male_user_thepencil_theclient_negocio_2321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\documentediting_editdocuments_text_documentedi_2820.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
